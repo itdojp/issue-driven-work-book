@@ -1,0 +1,60 @@
+{
+  "title": "Issue駆動の実務（仮）",
+  "description": "チケット駆動で調査・合意形成・実装・ナレッジ化を回すための型（Issue/PR/DoR/DoD等）を扱う。",
+  "author": "株式会社アイティードゥ",
+  "version": "0.1.0",
+  "structure": {
+    "chapters": [
+      {
+        "id": "chapter-01",
+        "title": "第1章：チケット駆動の前提（成果物・品質・期限・責任分界）"
+      },
+      {
+        "id": "chapter-02",
+        "title": "第2章：良いIssueテンプレ（背景/目的/スコープ/受け入れ条件）"
+      },
+      {
+        "id": "chapter-03",
+        "title": "第3章：再現手順・調査ログ（環境/ログ/証跡）"
+      },
+      {
+        "id": "chapter-04",
+        "title": "第4章：優先度とスコープ管理（分割/依存/影響度×緊急度）"
+      },
+      {
+        "id": "chapter-05",
+        "title": "第5章：Definition of Ready / Done（入口と出口の統一）"
+      },
+      {
+        "id": "chapter-06",
+        "title": "第6章：進捗報告の定型（現状/次/ブロッカー/期限）"
+      },
+      {
+        "id": "chapter-07",
+        "title": "第7章：PR説明の型（何を/なぜ/影響/テスト/ロールバック）"
+      },
+      {
+        "id": "chapter-08",
+        "title": "第8章：合意形成と意思決定記録（論点/選択肢/決定/未決）"
+      },
+      {
+        "id": "chapter-09",
+        "title": "第9章：完了からナレッジ化（FAQ/Runbook/ADRへの流し込み）"
+      }
+    ],
+    "appendices": [
+      {
+        "id": "templates",
+        "title": "テンプレ集"
+      },
+      {
+        "id": "checklists",
+        "title": "チェックリスト集"
+      },
+      {
+        "id": "references",
+        "title": "参考文献"
+      }
+    ]
+  }
+}

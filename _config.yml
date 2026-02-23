@@ -1,0 +1,22 @@
+title: Issue駆動の実務（仮）
+description: チケット駆動で調査・合意形成・実装・ナレッジ化を回すための型（Issue/PR/DoR/DoD等）を扱う。
+author: 株式会社アイティードゥ
+lang: ja
+url: https://itdojp.github.io
+baseurl: /issue-driven-work-book
+repository: https://github.com/itdojp/issue-driven-work-book
+markdown: kramdown
+highlighter: rouge
+plugins:
+- jekyll-feed
+- jekyll-sitemap
+- jekyll-seo-tag
+- jekyll-relative-links
+- jekyll-optional-front-matter
+defaults:
+- scope:
+    path: ''
+  values:
+    layout: book
+permalink: pretty
+license_text: CC BY-NC-SA 4.0
