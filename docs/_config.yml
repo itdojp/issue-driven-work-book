@@ -6,6 +6,8 @@ url: https://itdojp.github.io
 baseurl: /issue-driven-work-book
 repository: https://github.com/itdojp/issue-driven-work-book
 markdown: kramdown
+kramdown:
+  input: GFM
 highlighter: rouge
 plugins:
 - jekyll-feed
