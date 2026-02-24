@@ -1,0 +1,30 @@
+# Book-formatter compliant navigation structure
+
+chapters:
+  - title: "第1章：チケット駆動の前提（成果物・品質・期限・責任分界）"
+    path: "/chapters/chapter-01/"
+  - title: "第2章：良いIssueテンプレ（背景/目的/スコープ/受け入れ条件）"
+    path: "/chapters/chapter-02/"
+  - title: "第3章：再現手順・調査ログ（環境/ログ/証跡）"
+    path: "/chapters/chapter-03/"
+  - title: "第4章：優先度とスコープ管理（分割/依存/影響度×緊急度）"
+    path: "/chapters/chapter-04/"
+  - title: "第5章：Definition of Ready / Done（入口と出口の統一）"
+    path: "/chapters/chapter-05/"
+  - title: "第6章：進捗報告の定型（現状/次/ブロッカー/期限）"
+    path: "/chapters/chapter-06/"
+  - title: "第7章：PR説明の型（何を/なぜ/影響/テスト/ロールバック）"
+    path: "/chapters/chapter-07/"
+  - title: "第8章：合意形成と意思決定記録（論点/選択肢/決定/未決）"
+    path: "/chapters/chapter-08/"
+  - title: "第9章：完了からナレッジ化（FAQ/Runbook/ADRへの流し込み）"
+    path: "/chapters/chapter-09/"
+
+appendices:
+  - title: "テンプレ集"
+    path: "/appendices/templates/"
+  - title: "チェックリスト集"
+    path: "/appendices/checklists/"
+  - title: "参考文献"
+    path: "/appendices/references/"
+
