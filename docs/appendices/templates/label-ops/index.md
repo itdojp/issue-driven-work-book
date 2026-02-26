@@ -38,10 +38,12 @@ order: 908
 
 ## コピペ用（Issue本文に貼れる形式）
 
+※ 以下はそのままコピーして Issue に貼り付け、必要なラベルだけ残してください。ラベル名は「推奨ラベルセット（例）」に合わせています（運用するリポジトリの命名に合わせて調整してください）。
+
 ```md
 ### ラベル（最小セット）
 
-- priority: P0 / P1 / P2 / P3
-- type: bug / feat / task / docs
-- status: blocked / needs-info
+- `priority:P0` / `priority:P1` / `priority:P2` / `priority:P3`
+- `type:bug` / `type:feat` / `type:task` / `type:docs`
+- `status:blocked` / `status:needs-info`
 ```
