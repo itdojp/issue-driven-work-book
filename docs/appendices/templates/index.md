@@ -14,6 +14,7 @@ order: 900
 - [Issueテンプレ：改善](issue-improvement/)
 - [Issueテンプレ：作業](issue-task/)
 - [PRテンプレ](pr/)
+- [ADRテンプレ（意思決定記録）](adr/)
 - [進捗報告テンプレ](status-report/)
 - [DoR/DoD テンプレ](dor-dod/)
 - [トリアージ判断表（影響度×緊急度）](triage-matrix/)
