@@ -26,7 +26,7 @@ order: 40
 本書の優先度（priority）は「平時タスクの実行順（業務優先度）」を指す。障害対応の Severity（影響度ラベル）とは目的が異なるため、同じ P0/P1 の表記を使う場合でも文脈（平時/障害）を明確にする。
 
 - 平時: `priority:*`（付録のトリアージ判断表で運用）
-- 障害: Severity（incident-response-basics-book の運用に従う）
+- 障害: Severity（[incident-response-basics-book](https://itdojp.github.io/incident-response-basics-book/) の運用に従う）
 
 ### 分割の観点
 
