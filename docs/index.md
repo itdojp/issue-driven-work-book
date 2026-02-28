@@ -35,5 +35,6 @@ order: 0
 ## 付録
 
 - [テンプレ集](appendices/templates/)
+- [ケーススタディ（通し例）](appendices/case-studies/)
 - [チェックリスト集](appendices/checklists/)
 - [参考文献](appendices/references/)
