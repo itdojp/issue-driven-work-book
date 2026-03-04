@@ -8,7 +8,7 @@ order: 40
 
 ## この章で学ぶこと
 
-- 大きいIssueを分割し、依存関係を可視化する
+- 大きい Issue を分割し、依存関係を可視化する
 - 影響度×緊急度で優先度を決める
 - リスクと期限を明文化する
 
@@ -27,6 +27,11 @@ order: 40
 
 - 平時: `priority:*`（付録のトリアージ判断表で運用）
 - 障害: Severity（[incident-response-basics-book](https://itdojp.github.io/incident-response-basics-book/) の運用に従う）
+
+例（最小）:
+
+- 平時の改善タスク: `priority:P1`（影響×緊急度で判断理由を添える）
+- 障害対応: Severity（影響度ラベル。運用ルールに従う）
 
 ### 分割の観点
 
