@@ -3,6 +3,16 @@
   "description": "チケット駆動で調査・合意形成・実装・ナレッジ化を回すための型（Issue/PR/DoR/DoD等）を扱う。",
   "author": "株式会社アイティードゥ",
   "version": "0.1.0",
+  "license": "CC BY-NC-SA 4.0",
+  "metadata": {
+    "language": "ja",
+    "license": "CC BY-NC-SA 4.0",
+    "navigation": {
+      "home": "docs/index.md",
+      "triage": "docs/appendices/templates/triage-matrix/",
+      "dorDod": "docs/appendices/templates/dor-dod/"
+    }
+  },
   "structure": {
     "chapters": [
       {
@@ -56,6 +66,19 @@
         "title": "参考文献"
       }
     ]
+  },
+  "ux": {
+    "profile": "A",
+    "modules": {
+      "quickStart": true,
+      "readingGuide": true,
+      "checklistPack": true,
+      "troubleshootingFlow": true,
+      "conceptMap": false,
+      "figureIndex": false,
+      "legalNotice": true,
+      "glossary": false
+    }
   },
   "shared": {
     "version": "3.2.2",

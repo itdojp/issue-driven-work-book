@@ -9,6 +9,12 @@ order: 0
 
 調査・合意形成・実装・ナレッジ化を、チケット（Issue/PR）で再現性高く回すための型を整備する。
 
+## まず確認する導線
+
+- [ライセンス](https://github.com/itdojp/issue-driven-work-book/blob/main/LICENSE.md)
+- [トリアージ判断表（影響度×緊急度）](appendices/templates/triage-matrix/)
+- [DoR/DoD テンプレ](appendices/templates/dor-dod/)
+
 ## 想定読者
 
 - Issue/PR を使っているが、起票・レビュー・完了の品質が安定しない人
