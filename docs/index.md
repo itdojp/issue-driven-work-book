@@ -1,31 +1,39 @@
 ---
 title: "チケット駆動の仕事術：良いIssueとPRで回すタスク管理・報告・合意形成"
-description: "調査・合意形成・実装・ナレッジ化を、チケット（Issue/PR）で再現性高く回すための型を整備する。"
+description: "調査・合意形成・実装・ナレッジ化を、チケット（Issue / PR）で再現性高く回すための型を整備する。"
 layout: book
 order: 0
 ---
 
 # チケット駆動の仕事術：良いIssueとPRで回すタスク管理・報告・合意形成
 
-調査・合意形成・実装・ナレッジ化を、チケット（Issue/PR）で再現性高く回すための型を整備する。
+調査・合意形成・実装・ナレッジ化を、チケット（Issue / PR）で再現性高く回すための型を整備する。
 
 ## まず確認する導線
 
-- [ライセンス](https://github.com/itdojp/issue-driven-work-book/blob/main/LICENSE.md)
+- [Issueテンプレ：不具合](appendices/templates/issue-bug/)
+- [Issueテンプレ：改善](appendices/templates/issue-improvement/)
+- [Issueテンプレ：作業](appendices/templates/issue-task/)
+- [PRテンプレ](appendices/templates/pr/)
 - [トリアージ判断表（影響度×緊急度）](appendices/templates/triage-matrix/)
 - [DoR/DoD テンプレ](appendices/templates/dor-dod/)
+- [テンプレ集](appendices/templates/)
+- [チェックリスト集](appendices/checklists/)
+- [ケーススタディ（通し例）](appendices/case-studies/)
+- [ライセンス](https://github.com/itdojp/issue-driven-work-book/blob/main/LICENSE.md)
 
 ## 想定読者
 
-- Issue/PR を使っているが、起票・レビュー・完了の品質が安定しない人
+- Issue / PR を使っているが、起票・レビュー・完了の品質が安定しない人
 - 口頭・チャット依存の進め方から脱却し、引き継ぎ可能な形に整えたい人
 - 複数人での合意形成を、テンプレとチェックリストで再現可能にしたい人
 
 ## 学習成果
 
 - 良い Issue（背景/目的/スコープ/受け入れ条件）を自力で起票できる
-- 調査ログ・意思決定・進捗・PR説明を「レビュー可能な状態」で残せる
+- 調査ログ・意思決定記録・進捗報告・PR説明を「レビュー可能な状態」で残せる
 - DoR/DoD を運用ルールとして定義し、終わらないタスクを減らせる
+- 完了後の FAQ / Runbook / ADR への流し込みを通じて、作業結果を再利用可能なナレッジへ変換できる
 
 ## 所要時間（目安）
 
@@ -39,15 +47,18 @@ order: 0
 
 ## 前提知識
 
-- Git/GitHub の基本（Issue/PR）
+- Git/GitHub の基本（Issue / PR）
 - 基本的な開発フロー（ブランチ/レビュー）
+- Issue / PR の基本操作に不安がある場合は、[GitHub初心者ガイド](https://itdojp.github.io/github-guide-for-beginners-book/) を先に確認すると入りやすい
 
 ## クイックスタート（最小例）
 
 まず 1 枚、最小の Issue と PR 説明を書き、テンプレ運用の型を掴む。
 
-- Issue テンプレ: [不具合](appendices/templates/issue-bug/) / [改善](appendices/templates/issue-improvement/) / [作業](appendices/templates/issue-task/)
-- PR テンプレ: [PRテンプレ](appendices/templates/pr/)
+- 公開 Issue / PR に、顧客情報、障害の内部詳細、API キー、個人情報、公開前の判断メモをそのまま貼らないこと。公開用と社内用の記録は分けて扱う。
+
+- Issueテンプレ: [Issueテンプレ：不具合](appendices/templates/issue-bug/) / [Issueテンプレ：改善](appendices/templates/issue-improvement/) / [Issueテンプレ：作業](appendices/templates/issue-task/)
+- PRテンプレ: [PRテンプレ](appendices/templates/pr/)
 
 Issue（最小例）:
 
@@ -93,3 +104,19 @@ PR（最小例）:
 - [ケーススタディ（通し例）](appendices/case-studies/)
 - [チェックリスト集](appendices/checklists/)
 - [参考文献](appendices/references/)
+
+## ライセンス
+
+本書は **Creative Commons BY-NC-SA 4.0** ライセンスで公開しています。
+教育・研究・個人学習での利用は可能ですが、商用利用には事前許諾が必要です。
+
+[詳細なライセンス条件](https://github.com/itdojp/issue-driven-work-book/blob/main/LICENSE.md)
+
+## 利用・更新・質問窓口
+
+- リポジトリ: [itdojp/issue-driven-work-book](https://github.com/itdojp/issue-driven-work-book)
+- 誤記報告や改善提案は GitHub Issues、まとまった修正提案は GitHub PR を利用してください。
+- 更新差分を追う場合は、GitHub の [コミット履歴](https://github.com/itdojp/issue-driven-work-book/commits/main/) と [PR 一覧](https://github.com/itdojp/issue-driven-work-book/pulls) を参照してください。
+- ローカルで検証する場合は、`npm test` を通してから内容を確認してください。
+- テンプレートやチェックリストを組織で利用する場合は、役割分担、承認フロー、優先度定義、記録粒度を各自の運用ルールに合わせて調整してください。
+- 顧客情報、障害情報、内部判断メモを扱う場合は、公開範囲と保存先を事前に決めてからテンプレートへ転記してください。
