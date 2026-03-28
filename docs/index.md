@@ -11,10 +11,10 @@ order: 0
 
 ## まず確認する導線
 
-- [Issue テンプレ（不具合）](appendices/templates/issue-bug/)
-- [Issue テンプレ（改善）](appendices/templates/issue-improvement/)
-- [Issue テンプレ（作業）](appendices/templates/issue-task/)
-- [PR テンプレ](appendices/templates/pr/)
+- [Issueテンプレ：不具合](appendices/templates/issue-bug/)
+- [Issueテンプレ：改善](appendices/templates/issue-improvement/)
+- [Issueテンプレ：作業](appendices/templates/issue-task/)
+- [PRテンプレ](appendices/templates/pr/)
 - [トリアージ判断表（影響度×緊急度）](appendices/templates/triage-matrix/)
 - [DoR/DoD テンプレ](appendices/templates/dor-dod/)
 - [テンプレ集](appendices/templates/)
@@ -49,16 +49,16 @@ order: 0
 
 - Git/GitHub の基本（Issue/PR）
 - 基本的な開発フロー（ブランチ/レビュー）
-- Issue / PR の基本操作に不安がある場合は、[GitHub初心者ガイド](https://itdojp.github.io/github-guide-for-beginners-book/) を先に確認すると入りやすい
+- Issue/PR の基本操作に不安がある場合は、[GitHub初心者ガイド](https://itdojp.github.io/github-guide-for-beginners-book/) を先に確認すると入りやすい
 
 ## クイックスタート（最小例）
 
 まず 1 枚、最小の Issue と PR 説明を書き、テンプレ運用の型を掴む。
 
-- 公開 Issue / PR に、顧客情報、障害の内部詳細、API キー、個人情報、公開前の判断メモをそのまま貼らないこと。公開用と社内用の記録は分けて扱う。
+- 公開 Issue/PR に、顧客情報、障害の内部詳細、API キー、個人情報、公開前の判断メモをそのまま貼らないこと。公開用と社内用の記録は分けて扱う。
 
-- Issue テンプレ: [不具合](appendices/templates/issue-bug/) / [改善](appendices/templates/issue-improvement/) / [作業](appendices/templates/issue-task/)
-- PR テンプレ: [PRテンプレ](appendices/templates/pr/)
+- Issueテンプレ: [Issueテンプレ：不具合](appendices/templates/issue-bug/) / [Issueテンプレ：改善](appendices/templates/issue-improvement/) / [Issueテンプレ：作業](appendices/templates/issue-task/)
+- PRテンプレ: [PRテンプレ](appendices/templates/pr/)
 
 Issue（最小例）:
 
@@ -115,8 +115,8 @@ PR（最小例）:
 ## 利用・更新・質問窓口
 
 - リポジトリ: [itdojp/issue-driven-work-book](https://github.com/itdojp/issue-driven-work-book)
-- 誤記報告や改善提案は GitHub Issues、まとまった修正提案は Pull Request を利用してください。
-- 更新差分を追う場合は、GitHub のコミット履歴と Pull Request を参照してください。
+- 誤記報告や改善提案は GitHub Issues、まとまった修正提案は GitHub PR を利用してください。
+- 更新差分を追う場合は、GitHub の [コミット履歴](https://github.com/itdojp/issue-driven-work-book/commits/main/) と [PR 一覧](https://github.com/itdojp/issue-driven-work-book/pulls) を参照してください。
 - ローカルで検証する場合は、`npm test` を通してから内容を確認してください。
 - テンプレートやチェックリストを組織で利用する場合は、役割分担、承認フロー、優先度定義、記録粒度を各自の運用ルールに合わせて調整してください。
 - 顧客情報、障害情報、内部判断メモを扱う場合は、公開範囲と保存先を事前に決めてからテンプレートへ転記してください。
