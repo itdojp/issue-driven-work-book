@@ -1,13 +1,13 @@
 ---
 title: "チケット駆動の仕事術：良いIssueとPRで回すタスク管理・報告・合意形成"
-description: "調査・合意形成・実装・ナレッジ化を、チケット（Issue/PR）で再現性高く回すための型を整備する。"
+description: "調査・合意形成・実装・ナレッジ化を、チケット（Issue / PR）で再現性高く回すための型を整備する。"
 layout: book
 order: 0
 ---
 
 # チケット駆動の仕事術：良いIssueとPRで回すタスク管理・報告・合意形成
 
-調査・合意形成・実装・ナレッジ化を、チケット（Issue/PR）で再現性高く回すための型を整備する。
+調査・合意形成・実装・ナレッジ化を、チケット（Issue / PR）で再現性高く回すための型を整備する。
 
 ## まず確認する導線
 
@@ -24,7 +24,7 @@ order: 0
 
 ## 想定読者
 
-- Issue/PR を使っているが、起票・レビュー・完了の品質が安定しない人
+- Issue / PR を使っているが、起票・レビュー・完了の品質が安定しない人
 - 口頭・チャット依存の進め方から脱却し、引き継ぎ可能な形に整えたい人
 - 複数人での合意形成を、テンプレとチェックリストで再現可能にしたい人
 
@@ -47,15 +47,15 @@ order: 0
 
 ## 前提知識
 
-- Git/GitHub の基本（Issue/PR）
+- Git/GitHub の基本（Issue / PR）
 - 基本的な開発フロー（ブランチ/レビュー）
-- Issue/PR の基本操作に不安がある場合は、[GitHub初心者ガイド](https://itdojp.github.io/github-guide-for-beginners-book/) を先に確認すると入りやすい
+- Issue / PR の基本操作に不安がある場合は、[GitHub初心者ガイド](https://itdojp.github.io/github-guide-for-beginners-book/) を先に確認すると入りやすい
 
 ## クイックスタート（最小例）
 
 まず 1 枚、最小の Issue と PR 説明を書き、テンプレ運用の型を掴む。
 
-- 公開 Issue/PR に、顧客情報、障害の内部詳細、API キー、個人情報、公開前の判断メモをそのまま貼らないこと。公開用と社内用の記録は分けて扱う。
+- 公開 Issue / PR に、顧客情報、障害の内部詳細、API キー、個人情報、公開前の判断メモをそのまま貼らないこと。公開用と社内用の記録は分けて扱う。
 
 - Issueテンプレ: [Issueテンプレ：不具合](appendices/templates/issue-bug/) / [Issueテンプレ：改善](appendices/templates/issue-improvement/) / [Issueテンプレ：作業](appendices/templates/issue-task/)
 - PRテンプレ: [PRテンプレ](appendices/templates/pr/)
