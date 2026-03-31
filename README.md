@@ -9,6 +9,13 @@
 - GitHub Pages: `https://itdojp.github.io/issue-driven-work-book/`
 - 入口: `docs/index.md`
 
+## 公開版の主要導線
+
+- [トップページ](https://itdojp.github.io/issue-driven-work-book/)
+- [テンプレ集](https://itdojp.github.io/issue-driven-work-book/appendices/templates/)
+- [チェックリスト集](https://itdojp.github.io/issue-driven-work-book/appendices/checklists/)
+- [ケーススタディ（通し例）](https://itdojp.github.io/issue-driven-work-book/appendices/case-studies/)
+
 ## 開発（ローカル）
 
 ### 前提
