@@ -15,6 +15,8 @@ order: 0
 - [Issueテンプレ：改善](appendices/templates/issue-improvement/)
 - [Issueテンプレ：作業](appendices/templates/issue-task/)
 - [PRテンプレ](appendices/templates/pr/)
+- [進捗報告テンプレ](appendices/templates/status-report/)
+- [ラベル運用テンプレ](appendices/templates/label-ops/)
 - [トリアージ判断表（影響度×緊急度）](appendices/templates/triage-matrix/)
 - [DoR/DoD テンプレ](appendices/templates/dor-dod/)
 - [テンプレ集](appendices/templates/)
@@ -44,6 +46,14 @@ order: 0
 - 目次から、いま必要な成果物や判断がどこに書かれているかを把握する
 - 付録のテンプレとチェックリストを先に確認し、本文で意図と注意点を補完する
 - 章末のチェックリストをレビュー観点として運用に取り込む
+
+## 悩み別ショートカット
+
+- Issue をすぐ起票したい: [第2章](chapters/chapter-02/) → [Issueテンプレ集](appendices/templates/)
+- 調査ログや再現手順を整えたい: [第3章](chapters/chapter-03/) → [ケーススタディ](appendices/case-studies/)
+- 優先度判断で迷っている: [第4章](chapters/chapter-04/) → [トリアージ判断表](appendices/templates/triage-matrix/)
+- 進捗報告の型をすぐ使いたい: [第6章](chapters/chapter-06/) → [進捗報告テンプレ](appendices/templates/status-report/)
+- PR 説明を短時間で整えたい: [第7章](chapters/chapter-07/) → [PRテンプレ](appendices/templates/pr/)
 
 ## 前提知識
 
