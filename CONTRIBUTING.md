@@ -14,6 +14,12 @@
 3. 変更を加え、`npm test`（lint/link）を通す
 4. Pull Request を作成し、変更点/影響範囲/確認方法を記載する
 
+## 参照先
+
+- 公開版テンプレ集: [templates](https://itdojp.github.io/issue-driven-work-book/appendices/templates/)
+- 公開版チェックリスト集: [checklists](https://itdojp.github.io/issue-driven-work-book/appendices/checklists/)
+- 公開版ケーススタディ: [case studies](https://itdojp.github.io/issue-driven-work-book/appendices/case-studies/)
+
 ## ライセンス
 
 コントリビューションを行うことで、当該変更が CC BY-NC-SA 4.0 の条件で提供されることに同意したものとみなします。
