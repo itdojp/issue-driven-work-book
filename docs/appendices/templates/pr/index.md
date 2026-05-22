@@ -48,7 +48,7 @@ order: 904
 - review 本文:
 - inline comment / suggestion:
 - 対応不要理由（ある場合）:
-- 未解決 thread:
+- 未解決 review thread:
 
 ## 記入例（抜粋）
 
@@ -96,5 +96,5 @@ order: 904
 
 - review 本文: 全件確認
 - inline comment / suggestion: 修正または対応不要理由を返信
-- 未解決 thread: 0 を確認してから merge
+- 未解決 review thread: 0 を確認してから merge
 ```

@@ -38,7 +38,7 @@ Issue の DoD は「実装が終わった」だけで閉じない。PR を伴う
 |レビュー対応|review 本文、inline comment、suggestion を全件確認した|修正コミット、返信、対応不要理由|
 |未解決ゼロ|未解決 review thread がない|PR の review thread / conversation 状態|
 |CI green|必須チェックが成功している|CI URL、チェック名、対象コミット|
-|merge後確認|main checks と公開反映を確認した|main のチェック、公開URL、確認した文言|
+|merge 後確認|main checks と公開反映を確認した|main のチェック、公開URL、確認した文言|
 |ナレッジ化|必要な Runbook / FAQ / ADR へ転記した|転記先リンク、Owner、再確認条件|
 
 レビュー指摘に対応しない場合も、無視ではなく「対応不要理由」を返信する。たとえば、指摘がスコープ外、既存仕様と整合しない、別 Issue に分離すべき場合は、根拠と follow-up 先を明記する。
