@@ -33,7 +33,7 @@ Issue の DoD は「実装が終わった」だけで閉じない。PR を伴う
 
 |ゲート|確認すること|証跡の残し方|
 |---|---|---|
-|PR作成前|受け入れ条件に対応する変更と確認方法が揃っている|PR body に Issue と確認範囲を書く|
+|PR作成時|受け入れ条件に対応する変更と確認方法が揃っている|PR body に Issue と確認範囲を書く|
 |レビュー依頼|レビュー観点、影響範囲、リスク、未確定点が説明されている|PR body の Review scope / Risk|
 |レビュー対応|review 本文、inline comment、suggestion を全件確認した|修正コミット、返信、対応不要理由|
 |未解決ゼロ|未解決 review thread がない|PR の review thread / conversation 状態|
