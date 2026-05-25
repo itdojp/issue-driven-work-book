@@ -37,16 +37,29 @@ function readJson(relativePath) {
 
 function normalizeScalar(value) {
   if (value === undefined || value === null) return undefined;
-  let normalized = String(value).trim();
-  if (normalized.includes(' #')) normalized = normalized.split(' #', 1)[0].trim();
-  if (
-    (normalized.startsWith('"') && normalized.endsWith('"')) ||
-    (normalized.startsWith("'") && normalized.endsWith("'"))
-  ) {
-    normalized = normalized.slice(1, -1);
+  const raw = String(value).trim();
+  if (!raw) return raw;
+
+  const quote = raw[0];
+  if (quote === '"' || quote === "'") {
+    let escaped = false;
+    for (let index = 1; index < raw.length; index += 1) {
+      const char = raw[index];
+      if (char === '\\' && quote === '"' && !escaped) {
+        escaped = true;
+        continue;
+      }
+      if (char === quote && !escaped) {
+        return raw.slice(1, index);
+      }
+      escaped = false;
+    }
+    return raw.slice(1);
   }
-  return normalized;
+
+  return raw.includes(' #') ? raw.split(' #', 1)[0].trim() : raw;
 }
+
 
 function parseTopLevelYaml(relativePath) {
   const text = readText(relativePath);
@@ -127,17 +140,18 @@ function requireString(source, value) {
   return value.trim();
 }
 
-function normalizeRepoUrl(value) {
-  const raw = requireString('repository URL', value);
+function normalizeRepoUrl(value, source = 'repository URL') {
+  const raw = requireString(source, value);
   return raw.replace(/\.git$/, '').replace(/\/$/, '');
 }
+
 
 function packageLicense(license) {
   return license.replace(/\s+/g, '-');
 }
 
 function expectedFromBookConfig(bookConfig) {
-  const repoUrl = normalizeRepoUrl(bookConfig.repository);
+  const repoUrl = normalizeRepoUrl(bookConfig.repository, 'book-config.json repository');
   const repoMatch = repoUrl.match(/^https:\/\/github\.com\/([^/]+)\/([^/]+)$/);
   if (!repoMatch) fail('book-config.json repository: expected https://github.com/<owner>/<repo>');
   const owner = repoMatch ? repoMatch[1] : '';
@@ -196,7 +210,7 @@ function validatePackage(expected) {
   expectEqual('package.json description', pkg.description, expected.description);
   expectEqual('package.json license', pkg.license, expected.packageLicense);
   expectEqual('package.json repository.type', pkg.repository && pkg.repository.type, 'git');
-  expectEqual('package.json repository.url', normalizeRepoUrl(pkg.repository && pkg.repository.url), expected.repository);
+  expectEqual('package.json repository.url', normalizeRepoUrl(pkg.repository && pkg.repository.url, 'package.json repository.url'), expected.repository);
   expectEqual('package.json homepage', pkg.homepage, expected.pagesUrl);
   expectEqual('package.json bugs.url', pkg.bugs && pkg.bugs.url, `${expected.repository}/issues`);
   expectEqual('package.json scripts.check:metadata', pkg.scripts && pkg.scripts['check:metadata'], 'node scripts/check-metadata-consistency.js');
@@ -214,7 +228,7 @@ function validateJekyllConfig(relativePath, expected) {
   expectEqual(`${relativePath} version`, cfg.version, expected.version);
   expectEqual(`${relativePath} url`, cfg.url, expected.siteUrl);
   expectEqual(`${relativePath} baseurl`, cfg.baseurl, expected.baseurl);
-  expectEqual(`${relativePath} repository`, normalizeRepoUrl(cfg.repository), expected.repository);
+  expectEqual(`${relativePath} repository`, normalizeRepoUrl(cfg.repository, `${relativePath} repository`), expected.repository);
   expectEqual(`${relativePath} license_text`, cfg.license_text, expected.license);
 }
 
@@ -256,6 +270,25 @@ function validatePages(structure) {
   }
 }
 
+function resolveRepoRelativeIndex(target, source) {
+  const raw = requireString(source, target).replace(/\\/g, '/');
+  if (path.isAbsolute(raw) || raw.startsWith('/')) {
+    fail(`${source}: expected repository-relative path, got ${JSON.stringify(target)}`);
+    return null;
+  }
+  const normalized = path.posix.normalize(raw);
+  if (normalized === '..' || normalized.startsWith('../')) {
+    fail(`${source}: path traversal is not allowed: ${JSON.stringify(target)}`);
+    return null;
+  }
+  const resolved = path.resolve(ROOT, normalized, 'index.md');
+  if (resolved !== ROOT && !resolved.startsWith(`${ROOT}${path.sep}`)) {
+    fail(`${source}: resolved outside repository root: ${JSON.stringify(target)}`);
+    return null;
+  }
+  return resolved;
+}
+
 function validateBookMetadata(bookConfig, expected) {
   const metadata = bookConfig.metadata || {};
   expectEqual('book-config.json metadata.language', metadata.language, expected.lang);
@@ -264,11 +297,14 @@ function validateBookMetadata(bookConfig, expected) {
   expectEqual('book-config.json metadata.navigation.home', navigation.home, 'docs/index.md');
   for (const key of ['triage', 'dorDod']) {
     const target = navigation[key];
-    if (target && !fs.existsSync(repoPath(target, 'index.md'))) {
+    if (!target) continue;
+    const indexPath = resolveRepoRelativeIndex(target, `book-config.json metadata.navigation.${key}`);
+    if (indexPath && !fs.existsSync(indexPath)) {
       fail(`book-config.json metadata.navigation.${key}: missing ${target}/index.md`);
     }
   }
 }
+
 
 function validateReadme(expected) {
   const readme = readText('README.md') || '';
