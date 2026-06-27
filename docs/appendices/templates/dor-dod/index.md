@@ -1,10 +1,10 @@
 ---
-title: "DoR/DoD テンプレ"
+title: "DoR / DoD テンプレ"
 layout: book
 order: 906
 ---
 
-# DoR/DoD テンプレ
+# DoR / DoD テンプレ
 
 ## Definition of Ready（入口条件）
 

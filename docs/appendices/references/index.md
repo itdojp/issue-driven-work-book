@@ -6,7 +6,7 @@ order: 920
 
 # 参考文献
 
-## GitHub / Issue・PR運用（一次情報）
+## GitHub / Issue・PR 運用（一次情報）
 
 - [GitHub Docs: About issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)
 - [GitHub Docs: About issue and pull request templates](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/about-issue-and-pull-request-templates)

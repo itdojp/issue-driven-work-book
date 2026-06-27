@@ -2,7 +2,7 @@
   "name": "issue-driven-work-book",
   "version": "0.1.0",
   "private": true,
-  "description": "チケット駆動で調査・合意形成・実装・ナレッジ化を回すための型（Issue/PR/DoR/DoD等）を扱う。",
+  "description": "チケット駆動で調査・合意形成・実装・ナレッジ化を回すための型（Issue / PR / DoR / DoD 等）を扱う。",
   "scripts": {
     "start": "bash scripts/jekyll.sh serve",
     "build": "bash scripts/jekyll.sh build",
@@ -26,5 +26,14 @@
   "homepage": "https://itdojp.github.io/issue-driven-work-book/",
   "bugs": {
     "url": "https://github.com/itdojp/issue-driven-work-book/issues"
+  },
+  "engines": {
+    "node": ">=20.18.1"
+  },
+  "overrides": {
+    "js-yaml": "4.3.0",
+    "markdown-it": "14.2.0",
+    "linkify-it": "5.0.1",
+    "undici": "7.28.0"
   }
 }

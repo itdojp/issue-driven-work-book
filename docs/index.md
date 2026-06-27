@@ -1,6 +1,6 @@
 ---
-title: "チケット駆動の仕事術：良いIssueとPRで回すタスク管理・報告・合意形成"
-description: "チケット駆動で調査・合意形成・実装・ナレッジ化を回すための型（Issue/PR/DoR/DoD等）を扱う。"
+title: "チケット駆動の仕事術：良い Issue と PR で回すタスク管理・報告・合意形成"
+description: "チケット駆動で調査・合意形成・実装・ナレッジ化を回すための型（Issue / PR / DoR / DoD 等）を扱う。"
 author: "株式会社アイティードゥ"
 version: "0.1.0"
 permalink: /
@@ -8,20 +8,20 @@ layout: book
 order: 0
 ---
 
-# チケット駆動の仕事術：良いIssueとPRで回すタスク管理・報告・合意形成
+# チケット駆動の仕事術：良い Issue と PR で回すタスク管理・報告・合意形成
 
-チケット駆動で調査・合意形成・実装・ナレッジ化を回すための型（Issue/PR/DoR/DoD等）を扱う。Issue / PR を再現性高く回し、完了後のナレッジ化まで接続する。
+チケット駆動で調査・合意形成・実装・ナレッジ化を回すための型（Issue / PR / DoR / DoD 等）を扱う。Issue / PR を再現性高く回し、完了後のナレッジ化まで接続する。
 
 ## まず確認する導線
 
-- [Issueテンプレ：不具合](appendices/templates/issue-bug/)
-- [Issueテンプレ：改善](appendices/templates/issue-improvement/)
-- [Issueテンプレ：作業](appendices/templates/issue-task/)
-- [PRテンプレ](appendices/templates/pr/)
+- [Issue テンプレ：不具合](appendices/templates/issue-bug/)
+- [Issue テンプレ：改善](appendices/templates/issue-improvement/)
+- [Issue テンプレ：作業](appendices/templates/issue-task/)
+- [PR テンプレ](appendices/templates/pr/)
 - [進捗報告テンプレ](appendices/templates/status-report/)
 - [ラベル運用（最小セット）](appendices/templates/label-ops/)
 - [トリアージ判断表（影響度×緊急度）](appendices/templates/triage-matrix/)
-- [DoR/DoD テンプレ](appendices/templates/dor-dod/)
+- [DoR / DoD テンプレ](appendices/templates/dor-dod/)
 - [テンプレ集](appendices/templates/)
 - [チェックリスト集](appendices/checklists/)
 - [ケーススタディ（通し例）](appendices/case-studies/)
@@ -35,10 +35,10 @@ order: 0
 
 ## 学習成果
 
-- 良い Issue（背景/目的/スコープ/受け入れ条件）を自力で起票できる
+- 良い Issue（背景 / 目的 / スコープ / 受け入れ条件）を自力で起票できる
 - 受け入れ条件と確認方法を対応づけ、PR で示す証跡まで見通せる
-- 調査ログ・意思決定記録・進捗報告・PR説明を「レビュー可能な状態」で残せる
-- DoR/DoD を運用ルールとして定義し、レビュー対応・CI・merge 後確認まで完了条件に含められる
+- 調査ログ・意思決定記録・進捗報告・PR 説明を「レビュー可能な状態」で残せる
+- DoR / DoD を運用ルールとして定義し、レビュー対応・CI・merge 後確認まで完了条件に含められる
 - 完了後の FAQ / Runbook / ADR への流し込みを通じて、作業結果を再利用可能なナレッジへ変換できる
 
 ## 所要時間（目安）
@@ -57,13 +57,13 @@ order: 0
 - 調査ログや再現手順を整えたい: [第3章](chapters/chapter-03/) → [ケーススタディ](appendices/case-studies/)
 - 優先度判断で迷っている: [第4章](chapters/chapter-04/) → [トリアージ判断表](appendices/templates/triage-matrix/)
 - 進捗報告の型をすぐ使いたい: [第6章](chapters/chapter-06/) → [進捗報告テンプレ](appendices/templates/status-report/)
-- PR 説明を短時間で整えたい: [第7章](chapters/chapter-07/) → [PRテンプレ](appendices/templates/pr/)
+- PR 説明を短時間で整えたい: [第7章](chapters/chapter-07/) → [PR テンプレ](appendices/templates/pr/)
 
 ## 前提知識
 
 - Git/GitHub の基本（Issue / PR）
 - 基本的な開発フロー（ブランチ/レビュー）
-- Issue / PR の基本操作に不安がある場合は、[GitHub初心者ガイド](https://itdojp.github.io/github-guide-for-beginners-book/) を先に確認すると入りやすい
+- Issue / PR の基本操作に不安がある場合は、[GitHub 初心者ガイド](https://itdojp.github.io/github-guide-for-beginners-book/) を先に確認すると入りやすい
 
 ## クイックスタート（最小例）
 
@@ -71,8 +71,8 @@ order: 0
 
 - 公開 Issue / PR に、顧客情報、障害の内部詳細、API キー、個人情報、公開前の判断メモをそのまま貼らないこと。公開用と社内用の記録は分けて扱う。
 
-- Issueテンプレ: [Issueテンプレ：不具合](appendices/templates/issue-bug/) / [Issueテンプレ：改善](appendices/templates/issue-improvement/) / [Issueテンプレ：作業](appendices/templates/issue-task/)
-- PRテンプレ: [PRテンプレ](appendices/templates/pr/)
+- Issue テンプレ: [Issue テンプレ：不具合](appendices/templates/issue-bug/) / [Issue テンプレ：改善](appendices/templates/issue-improvement/) / [Issue テンプレ：作業](appendices/templates/issue-task/)
+- PR テンプレ: [PR テンプレ](appendices/templates/pr/)
 
 Issue（最小例）:
 
@@ -96,21 +96,21 @@ PR（最小例）:
 なぜ: 誤操作が多い
 影響: 入力フォームの保存時エラー文言が変わる
 テスト: 不正入力/境界値/回帰
-ロールバック: フラグをOFF
+ロールバック: フラグを OFF
 関連: #123
 ```
 
 ## 目次
 
 - [第1章: チケット駆動の前提（成果物・品質・期限・責任分界）](chapters/chapter-01/)
-- [第2章: 良いIssueテンプレ（背景/目的/スコープ/受け入れ条件）](chapters/chapter-02/)
-- [第3章: 再現手順・調査ログ（環境/ログ/証跡）](chapters/chapter-03/)
-- [第4章: 優先度とスコープ管理（分割/依存/影響度×緊急度）](chapters/chapter-04/)
+- [第2章: 良い Issue テンプレ（背景 / 目的 / スコープ / 受け入れ条件）](chapters/chapter-02/)
+- [第3章: 再現手順・調査ログ（環境 / ログ / 証跡）](chapters/chapter-03/)
+- [第4章: 優先度とスコープ管理（分割 / 依存 / 影響度×緊急度）](chapters/chapter-04/)
 - [第5章: Definition of Ready / Done（入口と出口の統一）](chapters/chapter-05/)
-- [第6章: 進捗報告の定型（現状/次/ブロッカー/期限）](chapters/chapter-06/)
-- [第7章: PR説明の型（何を/なぜ/影響/テスト/ロールバック）](chapters/chapter-07/)
-- [第8章: 合意形成と意思決定記録（論点/選択肢/決定/未決）](chapters/chapter-08/)
-- [第9章: 完了からナレッジ化（FAQ/Runbook/ADRへの流し込み）](chapters/chapter-09/)
+- [第6章: 進捗報告の定型（現状 / 次 / ブロッカー / 期限）](chapters/chapter-06/)
+- [第7章: PR 説明の型（何を / なぜ / 影響 / テスト / ロールバック）](chapters/chapter-07/)
+- [第8章: 合意形成と意思決定記録（論点 / 選択肢 / 決定 / 未決）](chapters/chapter-08/)
+- [第9章: 完了からナレッジ化（FAQ / Runbook / ADR への流し込み）](chapters/chapter-09/)
 
 ## 付録
 
