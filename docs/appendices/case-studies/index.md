@@ -18,7 +18,7 @@ order: 905
 - 優先度: `priority:P1`（問い合わせ増加のため優先対応）
 - これは障害対応ではないため、Severity（incident-response）ではなく priority を使う
 
-## 1) Issue作成（親Issue）
+## 1) Issue 作成（親 Issue）
 
 ```md
 ## 背景
@@ -48,14 +48,14 @@ order: 905
 
 ## 確認方法
 
-- Given/When/Then: 単体テスト、E2E、手動UI確認
+- Given/When/Then: 単体テスト、E2E、手動 UI 確認
 - 計測: リリース後2週間の操作ログと問い合わせ件数
-- PRで示す証跡: テスト結果、確認画面、メトリクス確認先
+- PR で示す証跡: テスト結果、確認画面、メトリクス確認先
 
 ## 影響
 
 - リスク: 既存の自動入力が弾かれる可能性
-- 依存: 文言ポリシー（別Issue）と整合が必要
+- 依存: 文言ポリシー（別 Issue）と整合が必要
 
 ## 根拠・未確定点
 
@@ -70,33 +70,33 @@ order: 905
 - 確認: CS
 ```
 
-## 2) 分割（子Issue）
+## 2) 分割（子 Issue）
 
-- 子Issue A（bug）: 不正入力時に500になる（入力チェック不足）
-- 子Issue B（feat）: フロントで即時エラー表示（UX改善）
-- 子Issue C（task）: 変更後の監視（誤操作率/エラー率）を追加
+- 子 Issue A（bug）: 不正入力時に500になる（入力チェック不足）
+- 子 Issue B（feat）: フロントで即時エラー表示（UX 改善）
+- 子 Issue C（task）: 変更後の監視（誤操作率/エラー率）を追加
 
-依存: A→B→C の順（まずサーバ側の安全を確保し、次にUX、最後に運用/監視）。
+依存: A→B→C の順（まずサーバ側の安全を確保し、次に UX、最後に運用/監視）。
 
-## 3) DoR/DoD（入口/出口の合意）
+## 3) DoR / DoD（入口/出口の合意）
 
 - DoR: 背景/目的/受け入れ条件/非スコープ/リスクが揃っている
 - DoD: 受け入れ条件を満たし、ロールバックが定義され、必要なドキュメント更新が終わっている
 
-付録テンプレ: [DoR/DoD](../templates/dor-dod/)
+付録テンプレ: [DoR / DoD](../templates/dor-dod/)
 
 ## 4) 進捗報告（定型で更新）
 
 ```md
 ## 現状
 
-- 子Issue A は再現できた。原因はサーバ側の必須項目チェック不足
-- 子Issue B は実装中（feature flag で切替）
+- 子 Issue A は再現できた。原因はサーバ側の必須項目チェック不足
+- 子 Issue B は実装中（feature flag で切替）
 
 ## 次にやること
 
 - サーバ側のバリデーションを追加し、テストを整備
-- E2Eで主要導線を確認
+- E2E で主要導線を確認
 
 ## ブロッカー
 
@@ -117,7 +117,7 @@ order: 905
 
 ## 5) PR（レビュー可能な説明）
 
-付録テンプレ: [PRテンプレ](../templates/pr/)
+付録テンプレ: [PR テンプレ](../templates/pr/)
 
 ```md
 ## 何を
@@ -131,7 +131,7 @@ order: 905
 
 ## 影響
 
-- 影響範囲: 保存API（入力エラー時のレスポンスが変わる）
+- 影響範囲: 保存 API（入力エラー時のレスポンスが変わる）
 - リスク: クライアント側で想定していないエラー形式だと表示が崩れる
 
 ## テスト
@@ -141,15 +141,15 @@ order: 905
 
 ## 受け入れ条件との対応
 
-|Issueの受け入れ条件|対応する変更|確認結果|残タスク|
+|Issue の受け入れ条件|対応する変更|確認結果|残タスク|
 |---|---|---|---|
-|必須項目が未入力なら保存されない|サーバ側バリデーション追加|単体/E2E PASS|なし|
-|どの項目が不足か分かる|項目別エラー文言を返す|手動UI確認 PASS|文言ポリシー全体統一は別Issue|
-|誤操作率 1% 以下|計測イベントを追加|PR時点では未判定|2週間後に follow-up Issue で確認|
+|必須項目が未入力なら保存されない|サーバ側バリデーション追加|単体 / E2E PASS|なし|
+|どの項目が不足か分かる|項目別エラー文言を返す|手動 UI 確認 PASS|文言ポリシー全体統一は別 Issue|
+|誤操作率 1% 以下|計測イベントを追加|PR 時点では未判定|2週間後に follow-up Issue で確認|
 
 ## ロールバック
 
-- feature flag をOFF（Runbookに手順を追記）
+- feature flag を OFF（Runbook に手順を追記）
 
 ## レビュー対応メモ
 
@@ -158,9 +158,9 @@ order: 905
 - 対応しない場合は理由と follow-up Issue を返信する
 - 未解決 review thread が 0 であることを確認してから merge する
 
-## 関連Issue
+## 関連 Issue
 
-- #123（親Issue、例）
+- #123（親 Issue、例）
 ```
 
 ## 6) 完了（クローズとナレッジ化）
@@ -178,10 +178,10 @@ ADR: バリデーション方式の決定を記録（リンク）
 
 ## 7) ADR（意思決定記録）
 
-付録テンプレ: [ADRテンプレ](../templates/adr/)
+付録テンプレ: [ADR テンプレ](../templates/adr/)
 
 ## 関連（次に読むと良い）
 
-- engineering-documentation-book（Runbook/手順書/障害報告）: <https://itdojp.github.io/engineering-documentation-book/>
-- incident-response-basics-book（Severity/連絡頻度/指揮系統）: <https://itdojp.github.io/incident-response-basics-book/>
+- engineering-documentation-book（Runbook / 手順書 / 障害報告）: <https://itdojp.github.io/engineering-documentation-book/>
+- incident-response-basics-book（Severity / 連絡頻度 / 指揮系統）: <https://itdojp.github.io/incident-response-basics-book/>
 - evidence-based-engineering-book（一次情報/検証/根拠化）: <https://itdojp.github.io/evidence-based-engineering-book/>

@@ -1,10 +1,10 @@
-# チケット駆動の仕事術：良いIssueとPRで回すタスク管理・報告・合意形成
+# チケット駆動の仕事術：良い Issue と PR で回すタスク管理・報告・合意形成
 
 ## 概要
 
-チケット駆動で調査・合意形成・実装・ナレッジ化を回すための型（Issue/PR/DoR/DoD等）を扱う。
+チケット駆動で調査・合意形成・実装・ナレッジ化を回すための型（Issue / PR / DoR / DoD 等）を扱う。
 
-## オンライン版（公開URL）
+## オンライン版（公開 URL）
 
 - GitHub Pages: `https://itdojp.github.io/issue-driven-work-book/`
 - 入口: `docs/index.md`
