@@ -136,3 +136,39 @@
     margin-left: calc(var(--sidebar-width) * 0.9);
   }
 }
+
+/* Reader-facing glossary */
+.glossary-list {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.glossary-entry {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  background: var(--bg-secondary);
+  overflow-wrap: anywhere;
+}
+
+.glossary-entry dt {
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.glossary-entry dd {
+  margin: 0;
+}
+
+.glossary-entry p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .glossary-entry {
+    padding: 0.75rem;
+  }
+}

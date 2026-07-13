@@ -25,6 +25,7 @@ order: 0
 - [テンプレ集](appendices/templates/)
 - [チェックリスト集](appendices/checklists/)
 - [ケーススタディ（通し例）](appendices/case-studies/)
+- [用語集](appendices/glossary/)
 - [ライセンス](https://github.com/itdojp/issue-driven-work-book/blob/main/LICENSE.md)
 
 ## 想定読者
@@ -118,6 +119,7 @@ PR（最小例）:
 - [ケーススタディ（通し例）](appendices/case-studies/)
 - [チェックリスト集](appendices/checklists/)
 - [参考文献](appendices/references/)
+- [用語集](appendices/glossary/)
 
 ## ライセンス
 

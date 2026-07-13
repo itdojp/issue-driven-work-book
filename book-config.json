@@ -68,6 +68,10 @@
       {
         "id": "references",
         "title": "参考文献"
+      },
+      {
+        "id": "glossary",
+        "title": "用語集"
       }
     ]
   },
@@ -81,7 +85,7 @@
       "conceptMap": false,
       "figureIndex": false,
       "legalNotice": true,
-      "glossary": false
+      "glossary": true
     }
   },
   "shared": {
