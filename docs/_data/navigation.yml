@@ -29,4 +29,6 @@ appendices:
     path: "/appendices/checklists/"
   - title: "参考文献"
     path: "/appendices/references/"
+  - title: "用語集"
+    path: "/appendices/glossary/"
 
