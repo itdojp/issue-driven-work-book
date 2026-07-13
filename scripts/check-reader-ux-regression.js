@@ -55,8 +55,16 @@ for (const testCase of cases) {
       env: Object.assign({}, process.env, { READER_UX_ROOT: fixture }),
       encoding: 'utf8'
     });
-    if (result.status === 0) {
-      console.error('Negative regression failed to reject: ' + name);
+    if (result.error || result.signal || result.status === null) {
+      console.error('Negative regression harness failed for ' + name + ': ' +
+        (result.error ? result.error.message : 'child terminated without an exit status'));
+      process.exitCode = 1;
+      break;
+    }
+    if (result.status !== 1) {
+      console.error(result.status === 0
+        ? 'Negative regression failed to reject: ' + name
+        : 'Negative regression returned unexpected status ' + result.status + ': ' + name);
       process.exitCode = 1;
       break;
     }
