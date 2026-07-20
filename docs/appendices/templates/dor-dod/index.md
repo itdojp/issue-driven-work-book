@@ -31,10 +31,10 @@ order: 906
 |PR 説明|PR を作成した|||
 |レビュー対応・未解決 thread 0|レビューを伴う PR がある|||
 |CI green|対象変更を検証する CI が構成されている|||
-|merge 後の main checks|main 向け check が構成され、main へ merge した|||
+|merge 後の main checks|main 向け checks が構成されている。merge 前は PENDING、merge 後に PASS/FAIL を判定する|||
 |デプロイ/公開反映|デプロイ先または公開物がある|||
 |ロールバック|切り戻し可能な利用者/運用影響がある|||
-|運用/FAQ/Runbook/ADR への転記|運用や再利用手順へ影響する|||
+|ナレッジ化|運用や再利用手順へ影響する|||
 
 ## 運用メモ
 
@@ -42,4 +42,4 @@ order: 906
 - DoD を満たせない項目は、未完了のまま閉じず、follow-up Issue として分離する
 - レビュー対応は、修正だけでなく「対応しない判断」も返信して証跡に残す
 - 適用する条件付きゲートがすべて PASS で、FAIL / PENDING が 0 の場合だけ完了にする
-- N/A は条件非該当だけに使う。構成済み CI の失敗、main check の失敗、公開対象の未反映は N/A にしない
+- N/A は条件非該当だけに使う。構成済み CI の失敗、main checks の失敗、公開対象の未反映は N/A にしない

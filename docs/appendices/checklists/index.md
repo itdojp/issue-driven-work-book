@@ -59,7 +59,7 @@ order: 910
 - [ ] 修正または対応不要理由を返信した
 - [ ] 未解決 review thread が 0 である
 - [ ] 対象変更を検証する CI がある場合、対象 commit の check が green である
-- [ ] main 向け check がある場合、merge commit の check 結果を記録した
+- [ ] main 向け checks がある場合、merge 前は PENDING、merge 後は merge commit の checks 結果を記録した
 - [ ] デプロイ先または公開物がある場合、反映先・対象版・marker を確認した
 - [ ] 非該当の条件付きゲートは N/A 理由・判断根拠・Owner を記録した
 - [ ] 適用する条件付きゲートがすべて PASS で、FAIL / PENDING が 0 である

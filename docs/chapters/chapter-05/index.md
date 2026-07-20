@@ -36,16 +36,16 @@ Issue の DoD は「実装が終わった」だけで閉じない。一方、存
 |ゲート|適用条件|確認すること|証跡または N/A 記録|
 |---|---|---|---|
 |PR 説明|PR を作成した|受け入れ条件に対応する変更、確認方法、影響、リスクが揃っている|PR URL / body。PR がない場合は作業種別と Owner を添えて N/A|
-|レビュー|レビューを伴う PR がある|review 本文、inline comment、suggestion を全件確認し、未解決 thread が 0 である|修正、返信、対応不要理由、thread 状態|
-|CI|repository に対象変更を検証する CI が構成されている|対象コミットの必須 check が成功している|CI URL、check 名、対象 commit。CI が存在しない場合は確認方法と Owner を添えて N/A|
-|merge 後の main checks|変更を main へ merge し、main 向け check が構成されている|merge commit を対象とする check が成功している|main check URL、merge commit|
+|レビュー対応・未解決 thread 0|レビューを伴う PR がある|review 本文、inline comment、suggestion を全件確認し、未解決 thread が 0 である|修正、返信、対応不要理由、thread 状態|
+|CI green|repository に対象変更を検証する CI が構成されている|対象コミットの必須 check が成功している|CI URL、check 名、対象 commit。CI が存在しない場合は確認方法と Owner を添えて N/A|
+|merge 後の main checks|main 向け checks が構成されている|merge 前は PENDING とし、merge 後に merge commit を対象とする checks が成功している|merge 前は PENDING の理由、merge 後は main checks の URL と merge commit。checks が存在しない場合だけ N/A|
 |デプロイ/公開反映|変更対象にデプロイ先または公開物がある|対象版が反映され、期待する marker や挙動を確認した|deployment URL、公開 URL、確認した版/文言。公開物がなければ理由を添えて N/A|
 |ロールバック|変更に切り戻し可能な利用者/運用影響がある|手順、実行条件、判断者が定義されている|Runbook、revert 条件。記録だけの作業なら理由を添えて N/A|
 |ナレッジ化|運用や再利用手順へ影響する|Runbook / FAQ / ADR など必要な転記が完了した|転記先、Owner、再確認条件。影響がなければ N/A 理由|
 
 条件付きゲートの状態は `PASS / FAIL / PENDING / N/A` で記録する。適用するゲートが成功すれば PASS、失敗中なら FAIL、確認未完了なら PENDING、条件非該当の場合だけ N/A とする。完了できるのは適用するゲートがすべて PASS で、FAIL / PENDING が 0 の場合だけである。
 
-N/A は「未確認」や「失敗」の代替ではない。ゲート名、非該当理由、判断根拠、Owner を完了コメントへ残す。構成済み CI の失敗、main check の失敗、公開対象の未反映は N/A にして閉じない。
+N/A は「未確認」や「失敗」の代替ではない。ゲート名、非該当理由、判断根拠、Owner を完了コメントへ残す。構成済み CI の失敗、main checks の失敗、公開対象の未反映は N/A にして閉じない。
 
 レビュー指摘に対応しない場合も、無視ではなく「対応不要理由」を返信する。たとえば、指摘がスコープ外、既存仕様と整合しない、別 Issue に分離すべき場合は、根拠と follow-up 先を明記する。
 
